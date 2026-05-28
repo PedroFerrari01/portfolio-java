@@ -10,7 +10,7 @@ Sou apaixonado por desenvolvimento de software e utilizo este repositório como 
 * **Linguagem:** Java
 * **Conceitos de POO:**
   * Classes, Objetos e Instanciação
-  * Encapsulamento (Getters e Setters)
+  * Encapsulamento (Getters e Setters) 
   * Herança e Classes Abstratas
   * Polimorfismo e Sobrescrita de Métodos (`@Override`)
   * Interfaces e Contratos
