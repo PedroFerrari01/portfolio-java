@@ -1,0 +1,72 @@
+Passo a Passo - Como Rodar o EcoDrive (MySQL Nativo)
+PARTE 1: Configurar o Banco de Dados no MySQL Workbench
+
+Abra o programa MySQL Workbench no computador.
+
+Na tela inicial, clique no retângulo cinza da sua conexão local (geralmente chamado de Local instance MySQL80).
+
+Digite a senha que você criou na hora de instalar o MySQL (ex: root) e dê OK.
+
+Na tela escura central que se abrir, cole todo o código do nosso arquivo de banco de dados:
+
+SQL
+CREATE DATABASE IF NOT EXISTS ecodrive_db;
+USE ecodrive_db;
+
+CREATE TABLE IF NOT EXISTS veiculos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    marca VARCHAR(100) NOT NULL,
+    modelo VARCHAR(100) NOT NULL,
+    placa VARCHAR(20) NOT NULL UNIQUE,
+    ano INT NOT NULL,
+    quilometragem INT NOT NULL
+);
+
+No menu superior da tela, clique no ícone do Raio (Execute).
+
+Olhe na barra verde lá embaixo: se apareceu um check verde, o banco foi criado perfeitamente! Pode fechar o Workbench.
+
+PARTE 2: Ajustar a Senha no Código Java
+
+Abra o VS Code.
+
+Abra o arquivo EcoDriveApp.java.
+
+Vá até as primeiras linhas do código e procure a linha da senha:
+private String senha = "";
+
+Coloque a mesma senha que você usou no Workbench dentro das aspas (ex: private String senha = "root";).
+
+Salve o arquivo apertando Ctrl + S.
+
+PARTE 3: Como abrir a pasta e rodar no VS Code
+
+1. Abrindo a pasta do projeto no VS Code:
+
+Abra o VS Code.
+
+Vá lá no menu superior esquerdo e clique em File e depois em Open Folder.
+
+Vai abrir a janela do Windows. Procure a sua pasta `ecodrive` (que está na sua Área de Trabalho com o código Java e o arquivo `.jar` do conector juntos).
+
+Clique uma vez nela para selecionar e depois clique no botão "Selecionar Pasta"(ou "Abrir") lá embaixo.
+
+O VS Code vai recarregar e você verá os arquivos do seu projeto listados na barra lateral esquerda.
+
+2. Abrindo o Terminal:
+
+Agora, olhe para o menu superior do VS Code novamente
+
+Clique em Terminal e depois escolha New Terminal
+
+Vai subir uma janelinha preta na parte de baixo da tela. O cursor vai estar piscando lá, esperando um comando.
+
+3. O Comando para Rodar:
+
+Copie este comando exato aqui embaixo:
+
+java -cp "mysql-connector-j-9.7.0.jar;." EcoDriveApp.java
+
+Clique na tela preta do terminal lá embaixo, cole o comando e aperte a tecla Enter do teclado.
+
+Pronto! É só esperar um segundo e a telinha cinza do EcoDrive vai pular na sua frente.
