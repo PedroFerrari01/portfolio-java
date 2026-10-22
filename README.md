@@ -49,6 +49,6 @@ Este ambiente serve como registro prático de evolução técnica em Java, demon
 
 ## 📬 Contato
 
-- **E-mail:** pedrohpfarrari@gmail.com
+- **E-mail:** pedrohpferrari@gmail.com
 - **LinkedIn:** [Pedro Ferrari](https://www.linkedin.com/in/pedrohpferrari/)
 - **GitHub Perfil:** [@PedroFerrari01](https://github.com/PedroFerrari01)
